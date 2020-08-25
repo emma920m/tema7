@@ -1,0 +1,26 @@
+img {
+    width: 100%
+}
+
+section {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+
+}
+
+article {
+
+    flex-basis: 400px;
+    flex-grow: 1;
+    margin: 20px;
+}
+
+h1 {
+    text-align: center;
+}
+
+footer {
+    text-align: center;
+}
