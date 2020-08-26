@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+
+        <h1>Titel</h1>
+
+    </header>
+    <main>
+        <h2>undertitel</h2>
+
+        <section>
+
+
+            <article>
+                <img src=https://placeimg.com/640/480/arch alt="fra internettet">
+
+                <h3> Articel 1 </h3>
+                <p> "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum." </p>
+
+            </article>
+
+            <article>
+                <img src=https://placeimg.com/640/480/nature alt="fra internettet">
+                <h3> Articel 2 </h3>
+                <p> "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum." </p>
+
+            </article>
+        </section>
+    </main>
+
+    <footer>This it the footer </footer>
+
+    <script>
+        let pic1;
+        document.addEventListener("DOMContentLoaded", start);
+
+        function start() {
+            pic1 = document.querySelector("article:nth-child(1) img");
+            console.log(pic1);
+
+            pic1.addEventListener("click", skift)
+
+
+        }
+
+
+        function skift() {
+
+            pic1.src = "https://placeimg.com/640/480/people" + Math.round(Math.random() * 9) + 1;
+        }
+    </script>
+
+</body></html>
