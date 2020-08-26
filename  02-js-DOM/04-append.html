@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+
+        <h1>Titel</h1>
+
+    </header>
+    <main>
+        <h2>undertitel</h2>
+
+        <section>
+
+
+            <article>
+                <img src=https://placeimg.com/640/480/arch alt="fra internettet">
+
+                <h3> Articel 1 </h3>
+                <p> "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum." </p>
+
+            </article>
+
+            <article>
+                <img src=https://placeimg.com/640/480/nature alt="fra internettet">
+                <h3> Articel 2 </h3>
+                <p> "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum." </p>
+
+            </article>
+        </section>
+    </main>
+
+    <footer>This it the footer </footer>
+
+    <script>
+        const pic1 = document.querySelector("article:nth-child(1) img");
+        console.log(pic1);
+        pic1.src = "foto.jpg";
+        pic1.alt = "corona handsker";
+
+
+
+
+
+        let mainSection = document.querySelector("section");
+
+        //nyt artikel element 
+
+        let newArticle = document.createElement("article");
+
+        // nyt #H element 
+
+        let overskrift = document.createElement("h3");
+
+        //tekst til overskrift 
+        let overskriftText = document.createTextNode("Artikel 3");
+
+        //indsæt tekst i overskriften 
+
+
+        //ny kode 
+
+
+        let img = document.createElement("img");
+        img.src = "https://placeimg.com/640/480/nature"
+
+
+        let newtekst = document.createElement("tekst");
+
+
+
+
+
+
+        //ny #P element 
+
+        let tekst = document.createElement("p");
+
+
+        //tekst til overskrift 
+        let tekstbrødtekst = document.createTextNode("HER er den nye tekst");
+
+
+        // tilføj overskrift til artikkel 
+        newArticle.appendChild(overskrift);
+        overskrift.appendChild(overskriftText);
+
+        // tilføjelse for img 
+        newArticle.appendChild(img);
+
+        // tilføjelse for
+        newArticle.appendChild(tekst);
+        tekst.appendChild(tekstbrødtekst);
+
+
+        // tilføj artikkel til section 
+        mainSection.appendChild(newArticle);
+
+    </script>
+
+</body>
+
+</html>
