@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS objecter</title>
+    <link rel="stylesheet" href="">
+</head>
+
+<body>
+    <article id="dyr">
+
+
+        <h3> </h3>
+        <img src="" alt="">
+        <p> type:</p>
+        <p> levested:</p>
+
+    </article>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", start)
+
+        function start() {
+            console.log("DOMContentLoaded");
+        }
+
+
+        let overskrift = document.querySelector("h3");
+
+        let overskriftText = document.createTextNode("gris");
+
+        overskrift.appendChild(overskriftText);
+
+
+
+        let tekstType = document.querySelector("p");
+
+        let type = document.createTextNode("pattedyr");
+
+        tekstType.appendChild(type);
+
+
+        let img = document.querySelector("img");
+
+        let imgGris = img.src = "http://mabe-kea.dk/E19/pics/pig.png"
+
+
+
+        let tekstLevested = document.querySelector("p:nth-of-type(2)");
+
+        let levested = document.createTextNode("svinestig");
+
+        tekstLevested.appendChild(levested)
+
+
+
+
+
+        //let article = document.querySelector("article")
+
+        let dyr = {
+            "navn": "gris",
+            "type": "Pattegris",
+            "levested": "svinesti",
+            "billede": "http://mabe-kea.dk/E19/pics/pig.png"
+        }
+        console.log(`dyr: ${dyr.navn} type: ${dyr.type} levested: ${dyr.levested} billede: ${dyr.billede}`)
+
+    </script>
+</body>
+
+</html>
