@@ -42,6 +42,14 @@
     <script>
         let pic1;
         document.addEventListener("DOMContentLoaded", start);
+        let foto = ["https: //placeimg.com/640/480/animals", "https: //placeimg.com/640/480/arch", " https: //placeimg.com/640/480/nature", "https: //placeimg.com/640/480/people", "  https: //placeimg.com/640/480/tech"
+
+        ]
+
+
+
+
+
 
         function start() {
             pic1 = document.querySelector("article:nth-child(1) img");
@@ -49,13 +57,15 @@
 
             pic1.addEventListener("click", skift)
 
-
         }
 
 
         function skift() {
+            const nummer = Math.round(Math.random() * 4);
 
-            pic1.src = "https://placeimg.com/640/480/people" + Math.round(Math.random() * 9) + 1;
+            pic1.src = "https://placeimg.com/640/480/arch" + foto[nummer];
+            pic1.alt = foto[nummer];
+
         }
     </script>
 
