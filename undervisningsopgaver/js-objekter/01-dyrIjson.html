@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Json</title>
+    <style>
+        article {
+            border: 1px solid #333;
+            padding: 10px;
+        }
+
+        img {
+            max-width: 100%;
+        }
+
+        section {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+
+    </section>
+
+    <template>
+        <article>
+            <h3></h3>
+            <img src="" alt="">
+            <p class="type"></p>
+            <p class="levested"></p>
+        </article>
+    </template>
+
+
+
+    <script>
+        const fil = "alleDyr.json";
+
+        let container = document.querySelector("section");
+        let temp = document.querySelector("template");
+
+        async function hentdata(fil) {
+            const respons = await fetch(fil);
+            const json = await respons.json();
+            vis(json);
+        }
+
+        function vis(json) {
+
+            //løb igennem array "dyr"
+            json.forEach(Dyr => {
+
+                //klon indholdet,
+                let klon = temp.cloneNode(true).content;
+
+                klon.querySelector("h3").textContent = Dyr.navn;
+                //punktum da det er en class og ikke id
+                klon.querySelector(".type").textContent = Dyr.type;
+                klon.querySelector(".levested").textContent = Dyr.levested;
+                klon.querySelector("img").src = Dyr.billede;
+                // tilføjer klon elementet på containeren
+                container.appendChild(klon);
+
+
+            });
+
+        }
+
+        hentdata(fil);
+    </script>
+</body></html>
